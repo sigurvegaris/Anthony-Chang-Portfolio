@@ -15,7 +15,7 @@
     --bg-color: #000000;
     --second-bg-color: #000000;
     --text-color: #fff;
-    --main-color: #FF0000;
+    --main-color: #0033FF;
 }
 
 /* HTML and Body */
@@ -210,35 +210,36 @@ span {
 }
 
 
-.services h2 { 
+.services h2 {
     margin-bottom: 5rem;
 }
 
 .services-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
-.services-container .services-box {
-    flex: 1 1 30rem;
+.services-box {
+    flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
+    max-width: 30rem; /* Maximum width */
+    min-width: 20rem; /* Minimum width to ensure consistency */
     background: var(--second-bg-color);
-    padding: 3rem 2rem 4rem;
+    padding: 3rem 2rem;
     border-radius: 2rem;
     text-align: center;
     border: .2rem solid var(--bg-color);
     transition: .5s ease;
+    box-sizing: border-box; /* Include padding and border in the element's total width */
 }
 
-.services-container .services-box:hover {
+.services-box:hover {
     border-color: var(--main-color);
     transform: scale(1.02);
-
 }
 
-.services-box i{
+.services-box i {
     font-size: 7rem;
     color: var(--main-color);
 }
@@ -251,6 +252,17 @@ span {
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
 }
+
+.services-box .read-more {
+    display: none; /* Hide read more content by default */
+}
+
+.services-box.open .read-more {
+    display: block; /* Display read more content when box is open */
+}
+
+
+
 
 /* Base styles for the portfolio section */
 .portfolio {
