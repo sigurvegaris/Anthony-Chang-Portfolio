@@ -222,7 +222,7 @@
     <div class="container">
         <div class="row">
             <div class="input-box">
-                <form id="contact-form" action="https://formspree.io/f/myzgybbd" method="POST">
+                <form id="contact-form" action="https://formspree.io/f/movaqzgv" method="POST">
                     <input type="text" name="Name" placeholder="Full Name" required>
                     <input type="email" name="Email" placeholder="Email Address" required>
                     <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
@@ -273,12 +273,12 @@
             formStatus.style.display = 'block';
             form.reset();
         })
-        .catch(error => {
-            formStatus.innerHTML = 'Error! Your message could not be sent.';
-            formStatus.style.color = 'red';
-            formStatus.style.display = 'block';
-            console.error('Error!', error.message);
-        });
+        // .catch(error => {
+        //     formStatus.innerHTML = 'Error! Your message could not be sent.';
+        //     formStatus.style.color = 'red';
+        //     formStatus.style.display = 'block';
+        //     console.error('Error!', error.message);
+        // });
     });
 </script>
 </body>
